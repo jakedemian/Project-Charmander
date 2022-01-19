@@ -5,7 +5,7 @@ namespace _Scripts.Util {
         public static void Log(params string[] strings) {
             var msg = "";
             foreach (var s in strings) {
-                msg += s + " ";
+                msg += s;
             }
 
             Debug.Log(msg);
@@ -14,7 +14,7 @@ namespace _Scripts.Util {
         public static void Log(params object[] objects) {
             var msg = "";
             foreach (var o in objects) {
-                msg += o + " ";
+                msg += o;
             }
 
             Debug.Log(msg);
