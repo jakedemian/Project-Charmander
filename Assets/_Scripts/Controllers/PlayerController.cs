@@ -6,12 +6,12 @@ public class PlayerController : MonoBehaviour {
     public LayerMask groundLayer;
     public float moveSpeed;
 
-    private NullableVector3 currentMoveTarget;
-    private NavMeshAgent navMeshAgent;
+    private NullableVector3 _currentMoveTarget;
+    private NavMeshAgent _navMeshAgent;
 
     private void Start() {
-        currentMoveTarget = new NullableVector3();
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        _currentMoveTarget = new NullableVector3();
+        _navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     private void Update() {
@@ -23,8 +23,8 @@ public class PlayerController : MonoBehaviour {
             RaycastHit hit;
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity,
                     groundLayer)) {
-                currentMoveTarget.Set(hit.point);
-                navMeshAgent.SetDestination(currentMoveTarget.Get());
+                _currentMoveTarget.Set(hit.point);
+                _navMeshAgent.SetDestination(_currentMoveTarget.Get());
             }
         }
     }

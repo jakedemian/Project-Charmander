@@ -3,14 +3,14 @@ using UnityEngine.AI;
 
 public class MeleeEnemyController : MonoBehaviour {
     [SerializeField] private Transform target;
-    private NavMeshAgent navMeshAgent;
+    private NavMeshAgent _navMeshAgent;
 
     private void Start() {
         target = GameObject.FindWithTag("Player").transform;
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        _navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     private void Update() {
-        navMeshAgent.SetDestination(target.position);
+        _navMeshAgent.SetDestination(target.position);
     }
 }
