@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 25932414}
   - component: {fileID: 25932419}
   - component: {fileID: 25932420}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -653,7 +653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   target: {fileID: 25932418}
   meleeRange: 1.5
   meleeCooldown: 3
