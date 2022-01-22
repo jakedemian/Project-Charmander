@@ -1,14 +1,14 @@
+using _Scripts.Util;
 using UnityEngine;
 
 public class SpriteDirectionController : MonoBehaviour {
     private Transform _camera;
-    void Start() {
-        if (Camera.main != null) {
-            _camera = Camera.main.transform;
-        }
+
+    private void Start() {
+        _camera = Helpers.Camera.transform;
     }
 
-    void Update() {
+    private void Update() {
         transform.rotation = Quaternion.LookRotation(transform.position - _camera.position);
     }
 }

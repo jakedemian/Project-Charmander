@@ -1,3 +1,4 @@
+using _Scripts.Util;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour {
@@ -18,6 +19,6 @@ public class CameraController : MonoBehaviour {
 
         var mouseWheel = Input.mouseScrollDelta;
         zoomLevel = Mathf.Clamp(zoomLevel - mouseWheel.y * mouseSensitivity, 3, 7);
-        Camera.main.orthographicSize = zoomLevel;
+        Helpers.Camera.orthographicSize = zoomLevel;
     }
 }

@@ -55,7 +55,7 @@ public class AnimationController : MonoBehaviour {
     }
 
     private Vector3 GetNormalizedCameraDirection(string dir) {
-        var camTransform = Camera.main.transform;
+        var camTransform = Helpers.Camera.transform;
 
         if (dir == "left") {
             return -camTransform.right.normalized;
